@@ -14,6 +14,23 @@
     <div class="nav-links">
       <%= link_to 'Shop' %>
       <%= link_to "Contact" %>
+      <span id="genre">
+      <%= link_to   do %>
+        <span>Genre</span><i class="fa fa-caret-down" aria-hidden="true"></i>
+
+
+      <% end %>
+      </span>
+       <div class="categories" id="category" >
+        <ul class="categories-list"  >
+          <% @categories.each do |category| %>
+            <li><%= link_to category.title %></li>
+          <% end %>
+        </ul>
+       </div>
+
+
+
     </div>
   </div>
 </nav>

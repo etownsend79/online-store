@@ -33,11 +33,18 @@ body {
 }
 
 .nav {
-  height: 15vh;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  height: 10vh;
   display: flex;
   justify-content: space-around;
   align-content: center;
+  margin-bottom: 10px;
+
+
 }
+
+
 
 .cart {
   align-self: center;
@@ -91,8 +98,6 @@ body {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  height: 40vh;
-
 }
 
 .nav-links a {
@@ -113,6 +118,46 @@ body {
   color: #777;
 }
 
+
+
+#genre {
+
+  display: inline-block;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.fa-caret-down{
+  margin-left: 2px;
+}
+.categories {
+  position: relative;
+  display: none;
+}
+
+.categories ul {
+  position: absolute;
+  list-style-type: none;
+  background-color: white;
+  padding: 0 2rem;
+  width: 100%;
+
+}
+
+
+
+.show-ul {
+  display: block;
+}
+
+.categories-list li a {
+  background-color: white;
+}
+.categories-list li a {
+  margin-left: 1rem;
+  border-bottom: none;
+}
+
 // Banner Styles
 .banner-box {
 
@@ -131,7 +176,8 @@ body {
   margin-left: 2rem;
 }
 
-.banner-box-content h2 {
+.banner-box-content h2,
+.products h2 {
   font-size: 4rem;
   color: white;
   letter-spacing: .2rem;
@@ -139,7 +185,8 @@ body {
   margin-bottom: 30px;
 }
 
-#content a:link {
+#content a:link,
+#content a:visited {
   color: white;
   background-color: transparent;
   border: 2px solid white;
@@ -152,9 +199,30 @@ body {
   color: black;
 }
 
+// Product Styles
+.products h2 {
+  color: black;
+  text-transform: titlecase;
+  letter-spacing: .1rem;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2.5rem 0;
+  font-weight: 400;
+}
+
+
+
 
 
 @media (min-width: 1025px) {
+
+
+
+
+
+  nav {
+   padding: 0;
+  }
   .links {
     display: flex;
   }
@@ -185,6 +253,30 @@ body {
     border-bottom: none;
     align-content: center;
   }
+
+  .nav-links a:last-of-type {
+    display: flex;
+  }
+
+  .categories ul {
+    padding: 0;
+    top: 20px;
+    left: -100px;
+    width: 100%;
+
+  }
+
+  .categories-list li {
+    background-color: white;
+  }
+
+  .categories-list li a {
+    padding-right: 8rem;
+  }
+
+
+
+
 
   #hamburger {
     display: none;
