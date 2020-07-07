@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+
+
+
+ @import "font-awesome";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+.nav {
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.cart {
+  align-self: center;
+}
+
+.fa-cart-plus {
+  align-self: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+}
+
+.nav h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 140%;
+}
+
+
+#hamburger {
+  align-self: center;
+  cursor: pointer;
+}
+#hamburger div {
+  height: 5px;
+  width: 30px;
+  margin-bottom: 5px;
+  display: block;
+  background-color: black;
+
+}
+
+
+.links {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.nav-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+}
+
+.nav-links a {
+  display: inline-block;
+  border-bottom: 1px solid #ddd;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: .8rem;
+  color: #444;
+  transform: color .2s;
+}
+
+.nav-links a:hover {
+  color: #777;
+}
+
+
+
+@media (min-width: 1025px) {
+  .links {
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav h1 {
+    font-size: 5rem;
+    align-self: center;
+    font-weight: 700;
+  }
+
+  .nav-links {
+    height: auto;
+    margin-top: 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .nav-links a {
+    padding-left: 20px;
+    border-bottom: none;
+    align-content: center;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .cart {
+    display: none;
+  }
+
+
+}
