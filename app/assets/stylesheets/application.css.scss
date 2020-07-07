@@ -55,12 +55,14 @@ body {
   font-weight: 700;
   font-style: italic;
   letter-spacing: 140%;
+  align-self: center;
 }
 
 
 #hamburger {
   align-self: center;
   cursor: pointer;
+
 }
 #hamburger div {
   height: 5px;
@@ -71,9 +73,15 @@ body {
 
 }
 
+#hamburger div:last-of-type {
+  margin-bottom: 0;
+}
+
 
 .links {
   display: none;
+  position: relative;
+  z-index: 100;
 }
 .show {
   display: block;
@@ -84,6 +92,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 40vh;
+
 }
 
 .nav-links a {
@@ -102,6 +111,45 @@ body {
 
 .nav-links a:hover {
   color: #777;
+}
+
+// Banner Styles
+.banner-box {
+
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('reading-bg.jpg');
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+}
+
+.banner-box-content {
+  margin-left: 2rem;
+}
+
+.banner-box-content h2 {
+  font-size: 4rem;
+  color: white;
+  letter-spacing: .2rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+#content a:link {
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 5%;
+  transform: background-color .5s, color .5s;
+}
+#content a:hover {
+  background-color: white;
+  color: black;
 }
 
 
